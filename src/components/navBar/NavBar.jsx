@@ -3,6 +3,7 @@
 import CartWidget from "./CartWidget";
 import blockBusterLogo from "../../assets/blockBusterLogo.png";
 import "../navBar/navbar.scss";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
    const openNav = () => {
@@ -16,22 +17,24 @@ const NavBar = () => {
    return (
       <header>
          <div className="navBarLogo">
-            <img src={blockBusterLogo} alt="LogoPrincipal" />
+            <Link to="/">
+               <img src={blockBusterLogo} alt="LogoPrincipal" />
+            </Link>
          </div>
 
          <nav>
             <ul className="navBarLinks">
                <li>
-                  <a href="#">Nosotros</a>
+                  <Link to="/category/nosotros">Nosotros</Link>
                </li>
                <li>
-                  <a href="#">Alquilar</a>
+                  <Link to="/category/alquilar">Alquilar</Link>
                </li>
                <li>
-                  <a href="#">Comprar</a>
+                  <Link to="/category/comprar">comprar</Link>
                </li>
                <li>
-                  <a href="#">Novedades</a>
+                  <Link to="/">Novedades</Link>
                </li>
             </ul>
          </nav>
