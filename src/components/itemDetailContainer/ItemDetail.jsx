@@ -1,6 +1,7 @@
 import '../itemDetailContainer/itemDetail.scss'
+import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({product}) => {
+const ItemDetail = ({product, addProduct}) => {
   return (
     <div className="itemDetailContainer">
     
@@ -13,9 +14,10 @@ const ItemDetail = ({product}) => {
           <p className="paragraphDescription">{product.description}</p>
           <div className='eventProduct'>
             <p className="paragraphPrice">${product.price} USD</p>
-            <button className='buttonEvent'>{product.event}</button>
-
+          <ItemCount stock={product.stock} addProduct={addProduct}/>
           </div>
+            
+
         </div>
 
      

@@ -14,7 +14,7 @@ const Item = ({ product }) => {
            <div className="itemFooter"> 
                <Link to={`/movie/${product.id}`}><h6 className="readMore">Ver detalles</h6></Link>
                <div className="itemButton">
-                   <button>{product.event}</button>
+               <Link to={`/movie/${product.id}`}><button>{product.event}</button></Link>
                </div>
            </div>
        </div>
