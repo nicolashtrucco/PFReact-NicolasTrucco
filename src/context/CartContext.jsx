@@ -8,12 +8,38 @@
 
     //*Funcion agregar productos al carrito
     const addProductInCart = (newProduct) => {
-        setCart([...cart, newProduct])
+        const condition = isInCart(newProduct.id);
+        
+        if (condition) {
+            const newCart = cart.map((productCart) => {
+                if (productCart.id === newProduct.id) {
+                    const newQuantity = productCart.quantity + newProduct.quantity;
+                    
+                    if (newQuantity > productCart.stock) {
+                        alert('Estas superando el stock actual');
+                        return productCart;
+                    } else {
+                        // Utilizamos "newQuantity" en lugar de recalcular la cantidad
+                        return { ...productCart, quantity: newQuantity };
+                    }
+                } else {
+                    return productCart;
+                }
+            });
+    
+            setCart(newCart);
+        } else {
+            setCart([...cart, newProduct]);
+        }
+    };
+    
 
-    }
+    
 
     //* Funcion detectar productos duplicados
-    const isInCart = () => {}
+    const isInCart = (idProduct) => {
+        return cart.some((productCart)=> productCart.id === idProduct)
+    }
 
     //* Funcion calcular la cantidad total de productos 
     const totalQuantity = () => {
@@ -39,7 +65,7 @@
     }
 
     return(
-        <CartContext.Provider value={{cart, addProductInCart, totalQuantity, totalPrice, deleteProductInCart, DeleteCart }}>
+        <CartContext.Provider value={{cart, addProductInCart, totalQuantity, totalPrice, deleteProductInCart, DeleteCart, isInCart }}>
             {children}
         </CartContext.Provider>
     )

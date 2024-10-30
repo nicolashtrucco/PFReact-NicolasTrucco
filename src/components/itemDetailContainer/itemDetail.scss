@@ -49,6 +49,7 @@
             color: #ffffff;
             font-size: 1.2rem; 
             line-height: 1.5; 
+            text-align: center;
         }
 
         .eventProduct {
@@ -62,8 +63,20 @@
                 padding: 7px 20px; 
                 border-radius: 5px; 
                 font-size: 1.2rem; 
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-              
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                margin-top: 30px;
+                height: 45px;
+            }
+
+            .paragraphPriceBlue {
+                color: #FFFFFF;
+                background-color: #234899;
+                padding: 7px 20px; 
+                border-radius: 5px; 
+                font-size: 1.2rem; 
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                margin-top: 30px;
+                height: 45px;
             }
 
             button {

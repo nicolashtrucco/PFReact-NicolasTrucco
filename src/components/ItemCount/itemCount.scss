@@ -1,56 +1,64 @@
 .container-count {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-  
-    .count-Increase-Decrease {
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        margin-top: 30px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-  
-      button {
-        padding: 10px;
-        font-size: 18px;
-        background-color: transparent;
-        border: none;
-        font-weight: bold;
-        color: #FFFFFF;
-        cursor: pointer;
-        height: 35px;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  gap: 20px; 
 
-      }
-  
-      p {
-        margin: 0;
-        font-size: 20px;
-        color: #FFFFFF;
-      }
-    }
-  
-    .button-Add-Cart {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .count-Increase-Decrease {
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
       padding: 10px;
-      margin-top: 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-  
+      margin-top: 30px; 
+      background-color: transparent; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+
+      button {
+          padding: 10px;
+          font-size: 18px;
+          background-color: transparent; 
+          border: none; 
+          font-weight: bold; 
+          color: #FFFFFF; 
+          cursor: pointer; 
+          height: 35px; 
+          transition: background-color 0.3s; 
+
+          &:hover {
+              background-color: rgba(255, 255, 255, 0.2); 
+          }
+      }
+
       p {
-        margin: 0;
+          margin: 0; 
+          font-size: 20px; 
+          color: #FFFFFF; 
+          padding: 0 20px;
       }
-  
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
   }
+
+  .button-Add-Cart {
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 10px;
+      margin-top: 20px; 
+      background-color: #007bff; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+      transition: background-color 0.3s; 
+
+      p {
+          margin: 0; 
+      }
+
+      &:hover {
+          background-color: #0056b3; 
+      }
+  }
+}
+
   

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import '../ItemCount/itemCount.scss'
 
+
 const ItemCount = ( {stock, addProduct} ) => {
 
   let [counter, setCounter] = useState(1)
@@ -25,9 +26,9 @@ const ItemCount = ( {stock, addProduct} ) => {
 
       <div className="count-Increase-Decrease">
         
-        <button className="increase" onClick={handleIncrease}>+</button>
-        <p>{counter}</p>
         <button className="decrease" onClick={handleDecrease}>-</button>
+        <p>{counter}</p>
+        <button className="increase" onClick={handleIncrease}>+</button>
       </div>
 
       <div>

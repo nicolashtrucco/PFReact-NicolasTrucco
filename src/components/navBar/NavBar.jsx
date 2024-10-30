@@ -25,9 +25,6 @@ const NavBar = () => {
          <nav>
             <ul className="navBarLinks">
                <li>
-                  <Link to="/category/nosotros">Nosotros</Link>
-               </li>
-               <li>
                   <Link to="/category/alquilar">Alquilar</Link>
                </li>
                <li>
@@ -51,10 +48,10 @@ const NavBar = () => {
             </a>
 
             <div className="overlayContent">
-               <a href="#">Nosotros</a>
-               <a href="#">Alquilar</a>
-               <a href="#">Comprar</a>
-               <a href="#">Novedades</a>
+               <Link to="/category/nosotros">Nosotros</Link>
+               <Link to="/category/alquilar">Alquilar</Link>
+               <Link to="/category/alquilar">Alquilar</Link>
+               <Link to="/">Novedades</Link>
             </div>
          </div>
       </header>
