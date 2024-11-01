@@ -1,6 +1,8 @@
+import db from "../db/dbFireBase.js";
+import { addDoc, collection } from "firebase/firestore";
+
 const products  = [
 
-    //? COMPRAR
     {
         id: 'a42metros',
         name: 'A 42 metros',
@@ -31,8 +33,6 @@ const products  = [
         description: 'Una enfermera en la Irlanda del siglo XIX es contratada para investigar el caso de un niño que no ha comido durante cuatro meses.',
         stock: 1
     },
-
-    //? ALQUILAR
     {
         id: 'avatar2',
         name: 'Avatar 2',
@@ -85,24 +85,14 @@ const products  = [
     },
 ]
 
-//* Obtener Productos
-
-const getProducts = () => {
-    return new Promise((res, rej) => {
-        setTimeout( () => {
-            res(products)
-        }, 2000)
+const seedProducts = () => {
+    const productsRef = collection(db, 'products')
+    products.map(({id, ...dataProduct}) => {
+        addDoc(productsRef, dataProduct)
     })
+
+    console.log('Productos Subidos');
+    return
 }
 
-const  getProduct = (productId) => {
-    return new Promise( (res) => {
-        setTimeout( ()=> {
-            const product = products.find((product)=> product.id === productId)
-            res(product)
-        },2000)
-    })
-}
-
-export {getProducts, getProduct}
-
+seedProducts()

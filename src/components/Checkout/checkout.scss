@@ -1,0 +1,31 @@
+div {
+    h2 {
+        color: #FFFFFF;
+        margin: 15px;
+    }
+    P {
+        color: #FFFFFF;
+        margin: 15px;
+
+        span {
+            color: red;
+        }
+    }
+
+    .checkoutHome {
+        padding: 8px;
+        margin: 15px 0 15px 15px;
+        width: 175px;
+        align-self: center;
+        background-color: #58aeff;
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        transition: 0.25s ease-in;
+
+        &:hover {
+            background-color: #066dce;
+        }
+
+    }
+}

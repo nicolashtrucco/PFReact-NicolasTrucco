@@ -63,6 +63,7 @@
         &:hover {
           background-color: #ff7875;
         }
+
       }
     }
   
@@ -90,9 +91,26 @@
           font-size: 1.2rem;
           cursor: pointer;
           border-radius: 5px;
+          margin: 0 10px;
   
           &:hover {
             background-color: #ff7875;
+          }
+
+        }
+        .buy-cart {
+          background-color: #58aeff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1.2rem;
+          cursor: pointer;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: #83c3ff;
+          }
+          a {
+            color: #FFFFFF;
           }
         }
       }

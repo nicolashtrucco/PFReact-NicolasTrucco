@@ -37,6 +37,7 @@ const CartContainer = () => {
           </div>
           <div className="delete-cart">
             <button onClick={() => DeleteCart()}>Borrar</button>
+            <button className="buy-cart"><Link to={'/checkout'}>Comprar</Link></button>
           </div>
         </div>
       </div>
